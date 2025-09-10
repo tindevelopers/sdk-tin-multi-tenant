@@ -1,0 +1,54 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Development files
+.github/
+.vscode/
+.idea/
+
+# Test files
+**/*.test.ts
+**/*.spec.ts
+**/__tests__/
+coverage/
+jest.config.js
+jest.setup.js
+
+# Configuration files
+.eslintrc.js
+.prettierrc
+tsconfig.json
+.gitignore
+.npmignore
+
+# Documentation (keep only essential docs)
+CONTRIBUTING.md
+SECURITY.md
+
+# Development dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
