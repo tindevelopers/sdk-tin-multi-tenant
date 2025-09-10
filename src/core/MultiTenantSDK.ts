@@ -114,8 +114,14 @@ export class MultiTenantSDK {
       events: boolean;
     };
   }> {
-    const health = {
-      status: 'healthy' as const,
+    const health: {
+      status: 'healthy' | 'degraded' | 'unhealthy';
+      services: {
+        database: boolean;
+        events: boolean;
+      };
+    } = {
+      status: 'healthy',
       services: {
         database: false,
         events: false
@@ -147,6 +153,44 @@ export class MultiTenantSDK {
     }
 
     return health;
+  }
+
+  /**
+   * Get performance and usage metrics
+   */
+  async getMetrics(): Promise<{
+    performance: {
+      responseTime: number;
+      throughput: number;
+      errorRate: number;
+    };
+    usage: {
+      activeConnections: number;
+      requestsPerMinute: number;
+      memoryUsage: number;
+    };
+    errors: {
+      total: number;
+      recent: number;
+    };
+  }> {
+    // Mock metrics for now - in a real implementation, this would collect actual metrics
+    return {
+      performance: {
+        responseTime: Math.random() * 100 + 50, // 50-150ms
+        throughput: Math.random() * 1000 + 500, // 500-1500 req/s
+        errorRate: Math.random() * 0.05, // 0-5% error rate
+      },
+      usage: {
+        activeConnections: Math.floor(Math.random() * 100) + 10,
+        requestsPerMinute: Math.floor(Math.random() * 10000) + 1000,
+        memoryUsage: Math.random() * 100 + 50, // 50-150MB
+      },
+      errors: {
+        total: Math.floor(Math.random() * 1000),
+        recent: Math.floor(Math.random() * 10),
+      },
+    };
   }
 
   /**
