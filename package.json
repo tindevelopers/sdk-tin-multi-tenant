@@ -1,7 +1,7 @@
 {
-  "name": "@tin/tin-multi-tenant-sdk",
+  "name": "@tin/sdk-tin-multi-tenant",
   "version": "1.0.0-alpha.1",
-  "description": "TIN Multi-Tenant SDK - Enterprise-grade multi-tenant SaaS SDK with database abstraction, intelligent caching, and global deployment",
+  "description": "SDK TIN Multi-Tenant - Enterprise-grade multi-tenant SaaS SDK with database abstraction, intelligent caching, and global deployment",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

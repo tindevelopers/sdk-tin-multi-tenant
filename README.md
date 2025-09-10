@@ -1,4 +1,4 @@
-# TIN Multi-Tenant SDK
+# SDK TIN Multi-Tenant
 
 A comprehensive TypeScript SDK for building enterprise-grade multi-tenant SaaS applications with database abstraction, intelligent caching, built-in analytics, and global deployment capabilities.
 
@@ -29,14 +29,14 @@ A comprehensive TypeScript SDK for building enterprise-grade multi-tenant SaaS a
 ## 📦 Installation
 
 ```bash
-npm install @tin/tin-multi-tenant-sdk
+npm install @tin/sdk-tin-multi-tenant
 ```
 
 ## 🔧 Quick Start
 
 ### Phase 1: Supabase-Native
 ```typescript
-import { MultiTenantSDK } from '@tin/tin-multi-tenant-sdk';
+import { MultiTenantSDK } from '@tin/sdk-tin-multi-tenant';
 
 const sdk = new MultiTenantSDK({
   supabaseUrl: 'your-supabase-url',
@@ -48,7 +48,7 @@ const sdk = new MultiTenantSDK({
 
 ### Phase 2: Database-Agnostic
 ```typescript
-import { MultiTenantSDKV2 } from '@tin/tin-multi-tenant-sdk';
+import { MultiTenantSDKV2 } from '@tin/sdk-tin-multi-tenant';
 
 const sdk = new MultiTenantSDKV2({
   database: {
@@ -64,7 +64,7 @@ const sdk = new MultiTenantSDKV2({
 
 ### Phase 3: Enterprise Platform
 ```typescript
-import { MultiTenantSDKV3 } from '@tin/tin-multi-tenant-sdk';
+import { MultiTenantSDKV3 } from '@tin/sdk-tin-multi-tenant';
 
 const sdk = new MultiTenantSDKV3({
   database: {
